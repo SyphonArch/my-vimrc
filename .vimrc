@@ -1,74 +1,38 @@
-" An example for a vimrc file.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2017 Sep 20
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
+colo elflord
+syntax enable
 
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
+set softtabstop=4   " number of spaces in tab when editing
+set expandtab       " tabs are spaces
 
-" Get the defaults that most users want.
-source $VIMRUNTIME/defaults.vim
-
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set nobackup		" I edited this line so that annoying backups can go die
-  if has('persistent_undo')
-    set undofile	" keep an undo file (undo changes after closing)
-  endif
-endif
-
-if &t_Co > 2 || has("gui_running")
-  " Switch on highlighting the last used search pattern.
-  set hlsearch
-endif
-
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
-
-  " Put these in an autocmd group, so that we can delete them easily.
-  augroup vimrcEx
-  au!
-
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
-
-  augroup END
-
-else
-
-  set autoindent		" always set autoindenting on
-
-endif " has("autocmd")
-
-" Add optional packages.
-"
-" The matchit plugin makes the % command work better, but it is not backwards
-" compatible.
-" The ! means the package won't be loaded right away but when plugins are
-" loaded during initialization.
-if has('syntax') && has('eval')
-  packadd! matchit
-endif
+set autoindent
 
 set number
+
+filetype indent on
+
+set wildmenu
+
+set incsearch
+set hlsearch
+
+nnoremap \\ :nohlsearch<CR>   " \\ will turn off all highlights
 
 inoremap jk <esc>
 inoremap jj <esc>
 
+" allows cursor change in tmux mode
 if exists('$TMUX')
-  let &t_SI = "\ePtmux;\e\e[5 q\e\\"
-  let &t_EI = "\ePtmux;\e\e[2 q\e\\"
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 else
-  let &t_SI = "\e[5 q"
-  let &t_EI = "\e[2 q"
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
+augroup configgroup
+    autocmd!
+    autocmd FileType cpp setlocal tabstop=2
+    autocmd FileType cpp setlocal softtabstop=2
+    autocmd FileType cpp setlocal tabstop=2
+    autocmd FileType cpp setlocal softtabstop=2
+augroup END
