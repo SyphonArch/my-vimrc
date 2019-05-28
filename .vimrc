@@ -1,4 +1,4 @@
-colo elflord
+colo slate
 syntax enable
 
 set softtabstop=4   " number of spaces in tab when editing
