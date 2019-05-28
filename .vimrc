@@ -3,6 +3,7 @@ syntax enable
 
 set softtabstop=4   " number of spaces in tab when editing
 set expandtab       " tabs are spaces
+set shiftwidth=4
 
 set autoindent
 
@@ -33,6 +34,8 @@ augroup configgroup
     autocmd!
     autocmd FileType cpp setlocal tabstop=2
     autocmd FileType cpp setlocal softtabstop=2
-    autocmd FileType cpp setlocal tabstop=2
-    autocmd FileType cpp setlocal softtabstop=2
+    autocmd FileType cpp setlocal shiftwidth=2
+    autocmd FileType c setlocal tabstop=2
+    autocmd FileType c setlocal softtabstop=2
+    autocmd FileType c setlocal shiftwidth=2
 augroup END
