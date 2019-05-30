@@ -7,6 +7,8 @@ set shiftwidth=4
 
 set autoindent
 
+set backspace=indent,eol,start
+
 set number
 
 filetype indent on
