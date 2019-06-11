@@ -31,13 +31,3 @@ else
     let &t_SI="\<Esc>[5 q" " start insert mode
     let &t_EI="\<Esc>[0 q" " end insert mode
 endif
-
-augroup configgroup
-    autocmd!
-    autocmd FileType cpp setlocal tabstop=2
-    autocmd FileType cpp setlocal softtabstop=2
-    autocmd FileType cpp setlocal shiftwidth=2
-    autocmd FileType c setlocal tabstop=2
-    autocmd FileType c setlocal softtabstop=2
-    autocmd FileType c setlocal shiftwidth=2
-augroup END
