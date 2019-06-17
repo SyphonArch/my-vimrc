@@ -1,6 +1,8 @@
 colo slate
 syntax enable
 
+set confirm
+
 set softtabstop=4   " number of spaces in tab when editing
 set expandtab       " tabs are spaces
 set shiftwidth=4
