@@ -20,7 +20,8 @@ set wildmenu
 set incsearch
 set hlsearch
 
-nnoremap \\ :nohlsearch<CR>   " \\ will turn off all highlights
+" \\ will turn off all highlights
+nnoremap \\ :nohlsearch<CR>
 
 inoremap jk <esc>
 inoremap jj <esc>
