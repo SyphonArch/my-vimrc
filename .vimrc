@@ -24,7 +24,6 @@ set hlsearch
 nnoremap \\ :nohlsearch<CR>
 
 inoremap jk <esc>
-inoremap jj <esc>
 
 " allows cursor change in tmux mode
 if exists('$TMUX')
