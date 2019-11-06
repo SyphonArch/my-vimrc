@@ -20,6 +20,8 @@ set wildmenu
 set incsearch
 set hlsearch
 
+set mouse=a
+
 " \\ will turn off all highlights
 nnoremap \\ :nohlsearch<CR>
 
