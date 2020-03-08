@@ -22,8 +22,12 @@ set hlsearch
 
 set mouse=a
 
-" \\ will turn off all highlights
-nnoremap \\ :nohlsearch<CR>
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
+nnoremap \\ :nohlsearch<CR>   " \\ will turn off all highlights
 
 inoremap jk <esc>
 
@@ -35,3 +39,4 @@ else
     let &t_SI="\<Esc>[5 q" " start insert mode
     let &t_EI="\<Esc>[0 q" " end insert mode
 endif
+
