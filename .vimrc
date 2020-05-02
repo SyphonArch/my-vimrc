@@ -20,6 +20,10 @@ set wildmenu
 set incsearch
 set hlsearch
 
+" Following two lines make searches case sensitive only if uppercase letter is found in query
+set ignorecase
+set smartcase
+
 set mouse=a
 
 set foldmethod=indent
