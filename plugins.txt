@@ -1,0 +1,2 @@
+Plugins to install:
+    nerdtree  tagbar  vim-fugitive  YouCompleteMe
