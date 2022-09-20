@@ -57,4 +57,4 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 
 
 " Tagbar
-nmap <F8> :TagbarToggle<CR>
+nmap <C-k> :TagbarToggle<CR>
