@@ -31,8 +31,6 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
-nnoremap \\ :nohlsearch<CR>   " \\ will turn off all highlights
-
 inoremap jk <esc>
 
 " allows cursor change in tmux mode
