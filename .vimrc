@@ -45,6 +45,15 @@ endif
 
 " --------- Plugin related settings ---------
 
+call plug#begin()
+
+Plug 'preservim/nerdtree'
+Plug 'preservim/tagbar'
+Plug 'tpope/vim-fugitive'
+Plug 'ycm-core/YouCompleteMe'
+
+call plug#end()
+
 " NERDTree
 
 " Start NERDTree and put the cursor back in the other window.
