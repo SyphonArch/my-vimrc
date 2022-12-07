@@ -61,7 +61,7 @@ call plug#end()
 
 " NERDTree
 
-cnoremap nt NERDTree
+cnoremap nt<Enter> NERDTree<Enter>
 
 " Start NERDTree and put the cursor back in the other window.
 " autocmd VimEnter * NERDTree | wincmd p
