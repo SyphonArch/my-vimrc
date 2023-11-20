@@ -35,9 +35,9 @@ inoremap jk <esc>
 
 " allows cursor change in tmux mode
 if exists('$TMUX')
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>[5 q\<Esc>\\" " start INSERT mode
-    let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>[4 q\<Esc>\\" " start REPLACE mode
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>[2 q\<Esc>\\" " end INSERT mode
+    let &t_SI = "\033[5 q" " start INSERT mode
+    let &t_SR = "\033[4 q" " start REPLACE mode
+    let &t_EI = "\033[2 q" " end INSERT mode
 else
     let &t_SI="\<Esc>[5 q" " start INSERT mode
     let &t_SR="\<Esc>[4 q" " start REPLACE mode
