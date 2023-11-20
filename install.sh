@@ -1,5 +1,9 @@
 printf '%s\n' 'This will overwrite your vimrc.'
-printf '%s ' 'Press <Enter> to acknowledge and continue.'
+printf '%s\n\n' 'Changes are as follows:'
+
+diff ~/.vimrc ./.vimrc --color
+
+printf '\n%s ' 'Press <Enter> to acknowledge and continue.'
 read _
 cp .vimrc ~/.vimrc
 
