@@ -7,7 +7,7 @@ printf '\n%s ' 'Press <Enter> to acknowledge and continue.'
 read _
 cp .vimrc ~/.vimrc
 
-mkdir ~/.vim -p
+mkdir -p ~/.vim
 cp .ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
 
 printf '%s\n\n' 'Operation complete!'
