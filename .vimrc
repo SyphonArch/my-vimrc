@@ -38,9 +38,18 @@ if exists('$TMUX')
     let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>[5 q\<Esc>\\"
     let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>[0 q\<Esc>\\"
 else
-    let &t_SI="\<Esc>[5 q" " start insert mode
-    let &t_EI="\<Esc>[0 q" " end insert mode
+    let &t_SI="\<Esc>[5 q" " start INSERT mode
+    let &t_SR="\<Esc>[4 q" " start REPLACE mode
+    let &t_EI="\<Esc>[2 q" " end INSERT mode
 endif
+
+" Cursor settings:
+"   1 -> blinking block
+"   2 -> solid block 
+"   3 -> blinking underscore
+"   4 -> solid underscore
+"   5 -> blinking vertical bar
+"   6 -> solid vertical bar
 
 
 " --------- Plugin related settings ---------
