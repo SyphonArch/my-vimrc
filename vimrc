@@ -1,6 +1,6 @@
 set encoding=utf-8
 
-colo slate
+colo desert
 syntax enable
 
 set confirm
