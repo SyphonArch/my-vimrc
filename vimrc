@@ -33,7 +33,8 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
-inoremap jk <esc>
+inoremap kj <esc>
+xnoremap kj <esc>
 
 " allows cursor change in tmux mode
 if exists('$TMUX')
