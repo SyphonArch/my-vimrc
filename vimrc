@@ -36,6 +36,13 @@ set foldlevel=2
 inoremap kj <esc>
 xnoremap kj <esc>
 
+" Make VIM use system clipboard
+if has("unnamedplus")
+    set clipboard^=unnamedplus
+else
+    set clipboard^=unnamed
+endif
+
 " allows cursor change in tmux mode
 if exists('$TMUX')
     let &t_SI = "\033[5 q" " start INSERT mode
@@ -59,8 +66,8 @@ endif
 " --------- Plugin related settings ---------
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin()
