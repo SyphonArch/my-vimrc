@@ -66,6 +66,12 @@ nnoremap <Leader>d :execute "/\\V" . strftime("%y.%m.%d.")<CR>
 " Copy to system clipboard
 vnoremap <Leader>y "+y
 
+" Invoke NERDTree
+nnoremap <Leader>t :NERDTree<CR>
+
+" Toggle Tagbar
+nnoremap <Leader>b :TagbarToggle<CR>
+
 " --------- Plugin related settings ---------
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -82,19 +88,11 @@ Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 
-" NERDTree
-
-cnoremap nt<Enter> NERDTree<Enter>
-
 " Start NERDTree and put the cursor back in the other window.
 " autocmd VimEnter * NERDTree | wincmd p
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
-
-" Tagbar
-nmap <C-k> :TagbarToggle<CR>
 
 " YCM
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
