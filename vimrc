@@ -56,6 +56,16 @@ endif
 "   6 -> solid vertical bar
 
 
+" --------- Custom Shortcuts ---------
+" Set leader key to space
+let mapleader = " "
+
+"  Search for today's date - useful for journal entries
+nnoremap <Leader>d :execute "/\\V" . strftime("%y.%m.%d.")<CR>
+
+" Copy to system clipboard
+vnoremap <Leader>y "+y
+
 " --------- Plugin related settings ---------
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
