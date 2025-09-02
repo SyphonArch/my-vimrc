@@ -1,5 +1,0 @@
-Plugins to install:
-    nerdtree  tagbar  vim-fugitive  YouCompleteMe
-
-vim-plug related settings are currently included in the vimrc
-

@@ -85,6 +85,7 @@ Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'github/copilot.vim'
 
 call plug#end()
 
